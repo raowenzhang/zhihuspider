@@ -97,3 +97,9 @@ AUTOTHROTTLE_ENABLED = True
 MONGO_URI = 'localhost'
 
 MONGO_DATABASE = 'zhihu'
+
+
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"  # 调度器类
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"     #  指纹去重类
+
+REDIS_URL = 'redis://192.168.2.113:6379/3'  # 指定redis
